@@ -19,7 +19,7 @@ function searchPerson() {
           password.value = '';
           localStorage.setItem('personDetail', JSON.stringify(personalData));
           setTimeout(() => {
-            window.location.href = "./dashboard.html";
+            window.location.href = "dashboard.html";
           },2000);
         } else {
           document.querySelector('.password').style.border = '1px solid red';
@@ -35,3 +35,4 @@ document.querySelector('#js-login-btn').addEventListener('click', () => {
   searchPerson();
 
 });
+
