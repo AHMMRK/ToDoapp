@@ -19,7 +19,7 @@ function searchPerson() {
           password.value = '';
           localStorage.setItem('personDetail', JSON.stringify(personalData));
           setTimeout(() => {
-            location.href = "../dashboard.html";
+            location.href = "/ToDoapp/dashboard.html";
           },2000);
         } else {
           document.querySelector('.password').style.border = '1px solid red';
@@ -35,6 +35,7 @@ document.querySelector('#js-login-btn').addEventListener('click', () => {
   searchPerson();
 
 });
+
 
 
 
