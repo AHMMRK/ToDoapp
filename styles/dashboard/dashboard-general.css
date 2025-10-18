@@ -1,0 +1,26 @@
+:root {
+  --primary-color: #4E56C0;
+  --second-primary-color: #9B5DE0;
+  --third-primary-color: #D78FEE;
+  --fourth-primary-color: #ffeafe;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(/fonts/MONTSERRAT-BOLD.TTF);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
+}
+
+main img {
+  width: 35px !important;
+}
+
+a {
+  text-decoration: none;
+}

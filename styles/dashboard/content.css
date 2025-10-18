@@ -1,0 +1,242 @@
+.content {
+  width: 100%;
+  flex: 1;
+  margin-left: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.main-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+}
+
+.welcome-back {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.invite-button {
+  padding: 0.3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.invite-button:hover {
+  background-color: #d4d4d4;
+}
+
+.invite-button > span {
+  color: var(--primary-color);
+}
+
+.content-container {
+  width: 100%;
+  height: 800px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.content-container > div {
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.task-uncompleted {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 10px rgba(0,0,0,0.2);
+}
+
+.task-uncompleted-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-uncompleted-task-left, .header-uncompleted-task-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.header-uncompleted-task-right {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+.task-uncompleted-item-container {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 2rem;
+  gap: 1rem;
+  overflow: auto;
+}
+
+.task-uncompleted-item {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  animation: fade 1s forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.left-item-task {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.left-item-task > input {
+  width: 1.3rem;
+  cursor: pointer;
+}
+
+.texts-item-task {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.right-item-task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.right-item-task > img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.undermenu {
+  display: none;
+  padding: 0.3rem 2rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 1rem;
+  position: absolute;
+  right: 45px;
+  animation: fade 0.5s forwards;
+}
+
+.delete-task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 !important;
+}
+
+.task-completed {
+  width: 100%;
+  flex: 1;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 1rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+}
+
+.task-completed-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.completed-task-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-completed-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1.5rem;
+  padding-left: 1rem;
+}

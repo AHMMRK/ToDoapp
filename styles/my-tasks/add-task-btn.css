@@ -1,0 +1,17 @@
+.add-task-btn {
+  position: absolute !important;
+  width: 80px !important;
+  height: 80px !important;
+  right: 30px;
+  bottom: 120px;
+  background-color: red;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.add-task-btn > svg {
+  fill: white;
+  scale: 1.5;
+}

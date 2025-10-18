@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles/login.css">
+</head>
+
+<body>
+  <img class="background" src="images/login/background.svg" alt="back">
+  <div class="container">
+    <div class="form">
+      <div class="top-login">
+        <div class="title-form">
+          <h1>Sign in</h1>
+        </div>
+        <div class="input-container">
+          <div class="username">
+            <img src="images/login/username.svg" width="50" height="50" alt="username">
+            <input type="text" class="userInput js-userInput" required>
+            <span class="userplaceholder">Enter Username</span>
+          </div>
+          <div class="password">
+            <img src="images/login/password.svg" width="50" height="50" alt="username">
+            <input type="text" class="userPass js-userPass" required>
+            <span class="passplaceholder">Enter Password</span>
+          </div>
+        </div>
+        <div class="rem">
+          <input type="checkbox" class="remember-check">
+          <span>Remember Me</span>
+        </div>
+        <div class="login-btn-container">
+          <button class="login-btn" id="js-login-btn">
+            Login
+          </button>
+        </div>
+      </div>
+      <div class="bottom-login">
+        <div class="sign-in-option">
+          <span>Or, Login with</span>
+          <div class="logo">
+            <button>
+              <img src="images/login/facebook-logo.svg" width="40" height="40" alt="facebook-logo">
+            </button>
+            <button>
+              <img src="images/login/google-logo.svg" width="40" height="40" alt="google-logo">
+            </button>
+            <button>
+              <img src="images/login/X-logo.svg" width="40" height="40" alt="X-logo">
+            </button>
+          </div>
+        </div>
+        <div class="signup">
+          <span>Don't have an account?</span>
+          <a href="register.html">Create One</a>
+        </div>
+      </div>
+    </div>
+    <div class="element">
+      <img src="images/login/login-back-element.svg" alt="login-element-image">
+    </div>
+  </div>
+
+  <script type="module" src="script/login.js"></script>
+</body>
+
+</html>

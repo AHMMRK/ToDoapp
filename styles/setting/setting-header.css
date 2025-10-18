@@ -1,0 +1,144 @@
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  background-color: var(--fourth-primary-color);
+  gap: 1rem;
+}
+
+.header-title {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+
+.header-title > h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.header-title > h1 > span {
+  color: black;
+}
+
+.header-search {
+  flex: 7;
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  box-shadow: -3px 5px 10px rgba(0,0,0,0.2);
+  flex: 2;
+  max-width: 700px;
+  position: relative;
+}
+
+.input-span {
+  width: 0;
+  max-width: 100%;
+  background-color: transparent;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-span > input {
+  max-width: 100%;
+  width: 0;
+  flex: 1;
+  height: 100%;
+  padding: 1rem;
+  color: black;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-btn {
+  padding: 1rem 1.3rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.header-notification-calender {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.notification , .calendar{
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.65rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-box {
+  position: absolute;
+  bottom: -210px;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 1rem;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: none;
+}
+
+.calendar-box {
+  position: absolute;
+  bottom: -310px;
+  background-color: white;
+  width: max-content;
+  height: 300px;
+  border-radius: 1rem;
+  left: 0;
+  z-index: 100;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: none;
+}
+
+.header-date {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.header-date > span:last-child {
+  color: var(--primary-color);
+}

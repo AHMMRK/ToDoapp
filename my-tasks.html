@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Task</title>
+  <link rel="stylesheet" href="styles/my-tasks/add-task-btn.css">
+  <link rel="stylesheet" href="styles/my-tasks/my-task-general.css">
+  <link rel="stylesheet" href="styles/my-tasks/main-general-styles.css">
+  <link rel="stylesheet" href="styles/my-tasks/my-tasks-header.css">
+  <link rel="stylesheet" href="styles/my-tasks/menu.css">
+  <link rel="stylesheet" href="styles/my-tasks/content.css">
+  <link rel="stylesheet" href="styles/my-tasks/edit-task-styles.css">
+  <link rel="stylesheet" href="styles/my-tasks/add-task-btn.css">
+  <link rel="stylesheet" href="styles/my-tasks/add-task-style.css">
+  <link rel="stylesheet" href="styles/my-tasks/search.css">
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-title">
+      <h1>My<span>Task</span></h1>
+    </div>
+    <div class="header-search">
+      <div class="search-div">
+        <div class="input-span">
+          <input id="search-input" class="search-input" type="text" placeholder="Search Your task here...">
+        </div>
+        <div class="search-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+          </svg>
+        </div>
+        <div class="search-box js-search-box"></div>
+      </div>
+    </div>
+    <div class="header-notification-calender">
+      <div class="notification js-notification">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M22 10.5V12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2H13.5"
+            stroke="white" stroke-width="1.5" stroke-linecap="round" />
+          <circle cx="19" cy="5" r="3" stroke="white" stroke-width="1.5" />
+          <path d="M7 14H16" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M7 17.5H13" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+        <div class="notification-box js-notification-box">
+          <span>No notification...</span>
+        </div>
+      </div>
+      <div class="calendar js-calendar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12V14C22 17.7712 22 19.6569 20.8284 20.8284C20.1752 21.4816 19.3001 21.7706 18 21.8985"
+            stroke="white" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M7 4V2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M17 4V2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M21.5 9H16.625H10.75M2 9H5.875" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+        <div class="calendar-box js-calendar-box"></div>
+      </div>
+    </div>
+    <div class="header-date">
+      <span>Tuesday</span>
+      <span>20/06/2023</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="menu">
+      <div class="menu-container">
+        <div>
+          <div class="profile-detail">
+            <div class="profile-image">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+              </svg>
+            </div>
+            <div class="profile-names">
+              <span class="name js-name">AHM MRK</span>
+              <span class="email js-email">ahmmrk.3570m@gmail.com</span>
+            </div>
+          </div>
+          <div class="items-container-parent">
+            <div class="items">
+              <a href="dashboard.html">
+                <div class="item-container item-container-dashboard">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 -0.5 25 25" fill="none">
+                    <path
+                      d="M6.25 10.5C6.25 10.0858 5.91421 9.75 5.5 9.75C5.08579 9.75 4.75 10.0858 4.75 10.5H6.25ZM11.5 19.75C11.9142 19.75 12.25 19.4142 12.25 19C12.25 18.5858 11.9142 18.25 11.5 18.25V19.75ZM4.75 10.5C4.75 10.9142 5.08579 11.25 5.5 11.25C5.91421 11.25 6.25 10.9142 6.25 10.5H4.75ZM11.5 5.75C11.9142 5.75 12.25 5.41421 12.25 5C12.25 4.58579 11.9142 4.25 11.5 4.25V5.75ZM5.5 9.75C5.08579 9.75 4.75 10.0858 4.75 10.5C4.75 10.9142 5.08579 11.25 5.5 11.25V9.75ZM11.5 11.25C11.9142 11.25 12.25 10.9142 12.25 10.5C12.25 10.0858 11.9142 9.75 11.5 9.75V11.25ZM10.75 10.5C10.75 10.9142 11.0858 11.25 11.5 11.25C11.9142 11.25 12.25 10.9142 12.25 10.5H10.75ZM12.25 5C12.25 4.58579 11.9142 4.25 11.5 4.25C11.0858 4.25 10.75 4.58579 10.75 5H12.25ZM12.25 10.5C12.25 10.0858 11.9142 9.75 11.5 9.75C11.0858 9.75 10.75 10.0858 10.75 10.5H12.25ZM10.75 14C10.75 14.4142 11.0858 14.75 11.5 14.75C11.9142 14.75 12.25 14.4142 12.25 14H10.75ZM11.5 18.25C11.0858 18.25 10.75 18.5858 10.75 19C10.75 19.4142 11.0858 19.75 11.5 19.75V18.25ZM20.25 14C20.25 13.5858 19.9142 13.25 19.5 13.25C19.0858 13.25 18.75 13.5858 18.75 14H20.25ZM10.75 19C10.75 19.4142 11.0858 19.75 11.5 19.75C11.9142 19.75 12.25 19.4142 12.25 19H10.75ZM12.25 14C12.25 13.5858 11.9142 13.25 11.5 13.25C11.0858 13.25 10.75 13.5858 10.75 14H12.25ZM11.5 4.25C11.0858 4.25 10.75 4.58579 10.75 5C10.75 5.41421 11.0858 5.75 11.5 5.75V4.25ZM18.75 14C18.75 14.4142 19.0858 14.75 19.5 14.75C19.9142 14.75 20.25 14.4142 20.25 14H18.75ZM19.5 14.75C19.9142 14.75 20.25 14.4142 20.25 14C20.25 13.5858 19.9142 13.25 19.5 13.25V14.75ZM11.5 13.25C11.0858 13.25 10.75 13.5858 10.75 14C10.75 14.4142 11.0858 14.75 11.5 14.75V13.25ZM4.75 10.5L4.75 15H6.25L6.25 10.5H4.75ZM4.75 15C4.75 17.6234 6.87665 19.75 9.5 19.75V18.25C7.70507 18.25 6.25 16.7949 6.25 15H4.75ZM9.5 19.75H11.5V18.25H9.5V19.75ZM6.25 10.5V9H4.75V10.5H6.25ZM6.25 9C6.25 7.20507 7.70507 5.75 9.5 5.75V4.25C6.87665 4.25 4.75 6.37665 4.75 9H6.25ZM9.5 5.75H11.5V4.25H9.5V5.75ZM5.5 11.25H11.5V9.75H5.5V11.25ZM12.25 10.5V5H10.75V10.5H12.25ZM10.75 10.5V14H12.25V10.5H10.75ZM11.5 19.75H15.5V18.25H11.5V19.75ZM15.5 19.75C18.1234 19.75 20.25 17.6234 20.25 15H18.75C18.75 16.7949 17.2949 18.25 15.5 18.25V19.75ZM20.25 15V14H18.75V15H20.25ZM12.25 19V14H10.75V19H12.25ZM11.5 5.75H15.5L15.5 4.25H11.5V5.75ZM15.5 5.75C17.2949 5.75 18.75 7.20507 18.75 9L20.25 9C20.25 6.37665 18.1234 4.25 15.5 4.25L15.5 5.75ZM18.75 9V14H20.25V9L18.75 9ZM19.5 13.25H11.5V14.75H19.5V13.25Z"
+                      fill="white" />
+                  </svg>
+                  <span>Dashboard</span>
+                </div>
+              </a>
+              <a href="my-tasks.html">
+                <div class="item-container item-container-main">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#4E56C0"
+                    width="40" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet">
+                    <title>tasks-line</title>
+                    <path class="clr-i-outline clr-i-outline-path-1"
+                      d="M29.29,34H6.71A1.7,1.7,0,0,1,5,32.31V6.69A1.75,1.75,0,0,1,7,5H9V7H7V32H29V7H27V5h2.25A1.7,1.7,0,0,1,31,6.69V32.31A1.7,1.7,0,0,1,29.29,34Z" />
+                    <path class="clr-i-outline clr-i-outline-path-2"
+                      d="M16.66,25.76,11.3,20.4A1,1,0,0,1,12.72,19l3.94,3.94,8.64-8.64a1,1,0,0,1,1.41,1.41Z" />
+                    <path class="clr-i-outline clr-i-outline-path-3"
+                      d="M26,11H10V7.33A2.34,2.34,0,0,1,12.33,5h1.79a4,4,0,0,1,7.75,0h1.79A2.34,2.34,0,0,1,26,7.33ZM12,9H24V7.33A.33.33,0,0,0,23.67,7H20V6a2,2,0,0,0-4,0V7H12.33a.33.33,0,0,0-.33.33Z" />
+                    <rect x="0" y="0" width="40" fill-opacity="0" />
+                  </svg>
+                  <span>My Task</span>
+                </div>
+              </a>
+              <a href="setting.html">
+                <div class="item-container item-container-setting">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M14.1395 12.0002C14.1395 13.1048 13.2664 14.0002 12.1895 14.0002C11.1125 14.0002 10.2395 13.1048 10.2395 12.0002C10.2395 10.8957 11.1125 10.0002 12.1895 10.0002C13.2664 10.0002 14.1395 10.8957 14.1395 12.0002Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.57381 18.1003L5.12169 12.8133C4.79277 12.2907 4.79277 11.6189 5.12169 11.0963L7.55821 5.89229C7.93118 5.32445 8.55898 4.98876 9.22644 5.00029H12.1895H15.1525C15.8199 4.98876 16.4477 5.32445 16.8207 5.89229L19.2524 11.0923C19.5813 11.6149 19.5813 12.2867 19.2524 12.8093L16.8051 18.1003C16.4324 18.674 15.8002 19.0133 15.1281 19.0003H9.24984C8.5781 19.013 7.94636 18.6737 7.57381 18.1003Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Settings</span>
+                </div>
+              </a>
+              <div class="item-container item-container-help">
+                <svg style="margin-left: 0.35rem;" xmlns="http://www.w3.org/2000/svg" width="36" fill="currentColor"
+                  class="bi bi-question-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                  <path
+                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94" />
+                </svg>
+                <span>Help</span>
+              </div>
+            </div>
+            <div class="logout js-logout">
+              <div class="item-container item-container-logout">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 800 800" width="40">
+                  <!-- Generator: Adobe Illustrator 29.6.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 9)  -->
+                  <defs>
+                    <style>
+                      .st0 {
+                        stroke-linejoin: round;
+                      }
+
+                      .st0,
+                      .st1 {
+                        fill: none;
+                        stroke: white;
+                        stroke-linecap: round;
+                        stroke-width: 50px;
+                      }
+
+                      .st1 {
+                        stroke-miterlimit: 133.33;
+                      }
+                    </style>
+                  </defs>
+                  <path class="st0" d="M500,400H66.67M66.67,400l116.67-100M66.67,400l116.67,100" />
+                  <path class="st1"
+                    d="M300.06,233.33c.4-72.5,3.62-111.76,29.23-137.38,29.29-29.29,76.43-29.29,170.71-29.29h33.33c94.28,0,141.42,0,170.71,29.29,29.29,29.29,29.29,76.43,29.29,170.71v266.67c0,94.28,0,141.42-29.29,170.71-25.61,25.61-64.88,28.83-137.38,29.23M300.06,566.67c.4,72.5,3.62,111.76,29.23,137.38,21.38,21.38,52.26,27.15,104.04,28.71" />
+                </svg>
+                <span>Logout</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content"></div>
+
+    <div class="edit js-edit">
+      <div class="edit-container">
+        <div class="header-edit-task">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+              class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path
+                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+              <path fill-rule="evenodd"
+                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+            </svg>
+            <span>Edit Task</span>
+          </div>
+          <div>
+            <button class="close-box js-close-box">
+              <img src="images/cross.svg" alt="cross" width="45">
+            </button>
+          </div>
+        </div>
+        <div class="edit-elements">
+          <span class="js-todo-title-edit">dsfc</span>
+          <input class="js-edit-input" type="text" placeholder="Enter Your ToDo...">
+          <button class="js-submit-edit">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="add js-add">
+      <div class="add-container">
+        <div class="header-add-task">
+          <div class="left-add">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+              class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path
+                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+              <path fill-rule="evenodd"
+                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+            </svg>
+            <span>Add Task</span>
+          </div>
+          <div class="right-add">
+            <button class="close-box js-close-box-add">
+              <img src="images/cross.svg" alt="cross" width="45">
+            </button>
+          </div>
+        </div>
+        <div class="add-elements">
+          <input id="task-title" type="text" placeholder="Enter Your ToDo...">
+          <div class="status-task-container">
+            <div>
+              <input class="uncompleted-add" type="radio" name="task-status" checked value="uncompleted">
+              <span>uncompleted</span>
+            </div>
+            <div>
+              <input class="completed-add" type="radio" name="task-status" value="completed">
+              <span>completed</span>
+            </div>
+          </div>
+          <button id="add-task">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="add-task-btn js-add-task-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus"
+        viewBox="0 0 16 16">
+        <path
+          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+      </svg>
+    </button>
+
+  </main>
+
+  <script type="module" src="script/my-tasks.js"></script>
+  <script src="script/common/search.js" type="module"></script>
+</body>
+
+</html>

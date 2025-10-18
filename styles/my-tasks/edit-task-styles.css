@@ -1,0 +1,95 @@
+.edit {
+  position: absolute;
+  left: 340px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.75);
+  width: calc(100% - 330px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.edit-container {
+  width: 600px;
+  height: 350px;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.edit-container > .header-edit-task {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-edit-task > div:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header-edit-task > div:first-child > span {
+  font-size: 2rem;
+}
+
+.close-box {
+  width: 30px;
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.edit-elements {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.edit-elements > input {
+  width: 100%;
+  border: none;
+  outline: none;
+  box-shadow:0 0 10px rgba(0,0,0,0.33);
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+
+.edit-elements > button {
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: -3px -3px 1px var(--second-primary-color) inset;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.js-todo-title-edit {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}

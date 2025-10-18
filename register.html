@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="styles/register.css">
+</head>
+
+<body>
+  <img class="background" src="images/login/background.svg" alt="back">
+  <div class="container">
+    <div class="element">
+      <img src="images/login/signup-back-element.svg" alt="signup-element-image">
+    </div>
+    <div class="form">
+      <div class="div-form">
+        <div class="title-form">
+          <h1>Sign Up</h1>
+        </div>
+        <div class="input-container">
+          <div class="firsname js-firstname">
+            <img src="images/login/name.svg" width="50" height="50" alt="username">
+            <input type="text" class="firstname-input js-firstname-input" required>
+            <span class="fnplaceholder">Enter First Name</span>
+          </div>
+          <div class="lastname js-lastname">
+            <img src="images/login/lname.svg" width="50" height="50" alt="username">
+            <input type="text" class="lastname-input js-lastname-input" required>
+            <span class="lnplaceholder">Enter Last Name</span>
+          </div>
+          <div class="username js-username">
+            <img src="images/login/username.svg" width="50" height="50" alt="username">
+            <input type="text" class="username-input js-username-input" required>
+            <span class="unplaceholder">Enter Username</span>
+          </div>
+          <div class="email js-email">
+            <img src="images/login/email.svg" width="50" height="50" alt="username">
+            <input type="text" class="email-input js-email-input" required>
+            <span class="emplaceholder">Enter Email</span>
+          </div>
+          <div class="password js-password">
+            <img src="images/login/password.svg" width="50" height="50" alt="username">
+            <input type="text" class="password-input js-password-input" required>
+            <span class="passplaceholder">Enter Password</span>
+          </div>
+          <div class="passwordCheck js-passwordCheck">
+            <img src="images/login/password-repeat.svg" width="50" height="50" alt="username">
+            <input type="text" class="passwordCheck-input js-passwordCheck-input" required>
+            <span class="passCplaceholder">Confirm Password</span>
+          </div>
+        </div>
+        <div class="rem">
+          <input type="checkbox" class="remember-check js-remember-check">
+          <span>I agree to all terms</span>
+        </div>
+        <div class="signup-btn-container">
+          <button class="signup-btn" id="register-button">
+            Register
+          </button>
+        </div>
+        <div class="signin">
+          <span>Already have an account?</span>
+          <a href="index.html">Sign In</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="script/register.js"></script>
+</body>
+
+</html>

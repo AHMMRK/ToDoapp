@@ -1,0 +1,124 @@
+.menu {
+  width: 330px;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.menu-container {
+  width: 100%;
+  height: 92%;
+  background-color: var(--primary-color);
+  border-radius: 0 0.7rem 0 0;
+}
+
+.menu-container > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.profile-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-40px);
+}
+
+.profile-image {
+  width: 25%;
+  height: auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.33);
+}
+
+.profile-image > svg {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 100%;
+  scale: 0.8;
+}
+
+.profile-names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.items-container-parent {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.items-container-parent > .items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  margin-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  color: white;
+  transition: background-color 1s, color 0.5s;
+}
+
+.item-container:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.items > a:nth-child(3) > .item-container:hover > svg > path, .logout > .item-container:nth-child(1):hover > svg > path{
+  stroke: var(--primary-color);
+}
+
+.items > a:first-child > .item-container:nth-child(1):hover > svg > path{
+  fill: var(--primary-color);
+}
+
+.item-container:nth-child(2):hover > svg {
+  fill: var(--primary-color);
+}
+
+.item-container-main {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.logout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+

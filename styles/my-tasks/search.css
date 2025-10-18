@@ -1,0 +1,41 @@
+.search-box {
+  width: 100%;
+  position: absolute;
+  height: 400px;
+  background-color: white;
+  bottom: -410px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+  display: none;
+  overflow: auto;
+  animation: fade-in forwards 0.7s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.search-box > span {
+  width: 100%;
+  padding-block: 1rem;
+  background-color: var(--primary-color);
+  padding-left: 0.75rem;
+  border-radius: 0.75rem;
+  color: white;
+  cursor: pointer;
+}

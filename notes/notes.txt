@@ -1,0 +1,76 @@
+const completedContainer = document.querySelector('.js-task-completed-container');
+const uncompletedContainer = document.querySelector('.js-task-uncompleted-item-container');
+
+completedContainer.innerHTML = '';
+uncompletedContainer.innerHTML = '';
+
+this.tasks.forEach((todo) => {
+  let html = `
+      <div class="task-uncompleted-item js-uncompleted-item-${todo.id}">
+        <div class="left-item-task">
+          <input class="input-check js-check-completed-by-status" ${todo.status === "completed" ? 'checked' : ''} type="checkbox" data-todo-id="${todo.id}">
+          <div class="texts-item-task">
+            <span>${todo.title}</span>
+            <span>${todo.taskDate}</span>
+          </div>
+        </div>
+        <div class="right-item-task js-menu-item" data-task-id="${todo.id}">
+          <img src="/images/dashboard/delete.svg"  alt="small menu">
+        </div>
+      </div>
+    `;
+
+  if (todo.status === 'completed') {
+    completedContainer.innerHTML += html;
+    uncompletedContainer.innerHTML += html;
+  } else {
+    uncompletedContainer.innerHTML += html;
+  }
+});
+
+document.querySelectorAll('.js-menu-item').forEach((deleteTask) => {
+  deleteTask.addEventListener('click', () => {
+    const id = deleteTask.dataset.taskId;
+    this.removeFromStorage(id);
+  })
+})
+
+
+//Generate All Task
+let contentHTML = '';
+
+this.tasks.forEach((todo) => {
+  contentHTML += `
+    <div class="task-item-container">
+      <div>
+        <input class="js-check-completed" type="checkbox" ${todo.status === "completed" ? 'checked' : ''} data-todo-id="${todo.id}">
+        <div>
+          <span>${todo.title}</span>
+          <span>${todo.taskDate}</span>
+        </div>
+      </div>
+      <div>
+        <button class="delete-task js-delete-task" data-delete-Id="${todo.id}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-trash"
+            viewBox="0 0 16 16">
+            <path
+              d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+            <path
+              d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+          </svg>
+        </button>
+        <button class="edit-task js-edit-task" data-edit-Id="${todo.id}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+            class="bi bi-pencil-square" viewBox="0 0 16 16">
+            <path
+              d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+            <path fill-rule="evenodd"
+              d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  `;
+})
+
+contentContainer.innerHTML = contentHTML;
