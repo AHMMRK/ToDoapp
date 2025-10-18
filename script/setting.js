@@ -81,7 +81,3 @@ function setChangesOnPersonalLocals() {
     }
   })
 }
-
-task.alertHelp();
-
-
