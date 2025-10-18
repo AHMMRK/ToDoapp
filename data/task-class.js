@@ -363,7 +363,7 @@ export class Task {
 
   logoutSystem() {
     document.querySelector('.js-logout').addEventListener('click', () => {
-      location.href = "/ToDoapp/login.html";
+      location.href = "/ToDoapp/index.html";
     })
   }
 
@@ -480,5 +480,6 @@ export class Task {
 
 
 }
+
 
 
