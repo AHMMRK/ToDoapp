@@ -83,7 +83,7 @@ function checkEmpty() {
       document.querySelector('.js-password').style.border = '1px solid black';
       document.querySelector('.js-passwordCheck').style.border = '1px solid black';
       setTimeout(() => {
-        window.location = "../login.html";
+        window.location = "../index.html";
       }, 1000)
     }
 
@@ -100,4 +100,5 @@ function checkEmpty() {
 
 document.querySelector('#register-button').addEventListener('click', () => {
   checkEmpty();
+
 })
