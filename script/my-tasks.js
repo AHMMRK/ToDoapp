@@ -9,7 +9,7 @@ task.renderCalendar();
 task.openNotification();
 task.editTasks();
 task.alertHelp();
-
+task.logoutSystem();
 
 
 document.querySelector('.js-close-box').addEventListener('click', () => {
@@ -23,5 +23,6 @@ document.querySelector('.js-add-task-btn').addEventListener('click', () => {
 document.querySelector('.js-close-box-add').addEventListener('click', () => {
   document.querySelector('.js-add').style.display = "none";
 })
+
 
 task.addTaskAll();
