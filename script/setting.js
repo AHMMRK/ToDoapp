@@ -9,6 +9,7 @@ getProfileDetail();
 task.renderCalendar();
 task.openNotification();
 task.logoutSystem();
+task.alertHelp();
 
 const openBtn = document.querySelector('.js-account-information');
 const usernameInput = document.querySelector('.js-username');
@@ -82,4 +83,5 @@ function setChangesOnPersonalLocals() {
     }
   })
 }
+
 
