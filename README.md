@@ -22,4 +22,5 @@ Each user can register, log in, and manage their own personal tasks separately
 
 clone or download the project
 open index.html in browser
-register with your detail then login and use this app
+register with your info then login and use this app
+
